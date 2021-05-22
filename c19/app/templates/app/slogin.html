@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Helvetica; 
+  background: url({% static 'app/images/heart4.jpg' %})20%;
+  background-size:cover;
+  
+}
+form {
+  border: 2px solid white; 
+  background-color: cyan; 
+  width: 40%; 
+  margin: auto;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+h1{
+  text-align: center;
+  color: white;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+  box-shadow: 0 10px 25px rgba(0,0,0,1.0);
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+}
+</style>
+<title>Praise - {{ title }}</title>
+</head>
+<body>
+  
+
+<h1>Prediction Form Of {{ request.user.username }}</h1>
+<form action="" method="POST">
+{% csrf_token %}
+<div class="p">
+
+  <div class="container">
+    
+    <label><b>Dry Cough</b></label>
+    <input type="text" placeholder="Dry Cough" name="dry" required>
+    
+    <label><b>High Fever</b></label>
+    <input type="text" placeholder="Fever" name="fever" required>
+    
+    <label><b>Sore Throat</b></label>
+    <input type="text" placeholder="Throat" name="throat" required>
+    
+    <label><b>Difficulty</b></label>
+    <input type="text" placeholder="difficulty" name="difficulty" required>
+
+    <button type="submit" id="myDIV">Predict</button>
+  </div>
+
+  <div class="container">
+    <button type="button" class="cancelbtn"><a href="{% url 'home'%}">Cancel</a></button>
+    <button type="button" class="cancelbtn"><a href="{% url 'login'%}">Logout</a></button>
+  
+  </div>
+ </div>
+</form>
+
+</body>
+</html>

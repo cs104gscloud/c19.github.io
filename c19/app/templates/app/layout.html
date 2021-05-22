@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80883520-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-80883520-4');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Praise - {{ title }} </title>
+    <link rel="icon" type="image/ico" href="{% static 'app/img/favicon.ico' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'app/css/vendors.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/main.min.css' %}">
+</head>
+
+<body id="index" class="preload">
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__spinner">
+            <span class="spinner__ring"></span>
+        </div>
+        <div class="preloader__sitetitle">
+            Praise
+        </div>
+        <div class="preloader__text">
+            Loading
+        </div>
+    </div>
+    <!-- /Preloader -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="col-12 col-lg-3 col-xl-3 align-items-center d-flex">
+            <a class="navbar-brand font-weight-bolder mr-xl-3" href="{% url 'home'%}">
+                <img class="navbar-logo navbar-logo--inverted" src="{% static 'app/img/Blace-logo-inverted.svg' %}" alt="Blace">
+                <img class="navbar-logo navbar-logo--default" src="{% static 'app/img/Blace-logo-default.svg' %}" alt="Blace">
+            </a>
+            <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-default" aria-controls="navbars-default" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <span class="burger">
+                        <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                </span>
+                </span>
+            </button>
+        </div>
+        {% block navigation %}{% endblock %}
+        <div class="col-3 d-none d-xl-flex justify-content-end ">
+            <a class="btn btn-outline-light" href="{% url 'donation'%}"><i class='lni lni-heart'></i> Make your Predictions</a>
+        </div>
+    </nav>
+    <!-- /Navigation -->
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-12 col-md-3 text-left">
+                <p>© 2020 Copyright Slashdown</p>
+            </div>
+            <div class="col-12 col-md-9 text-md-right">
+                <ul>
+                    <li><a href="{% url 'faq'%}" data-flip="FAQ">FAQ</a></li>
+                    <li><a href="{% url 'contact'%}" data-flip="Contact">Contact</a></li>
+                    <li><a href="{% url 'donation'%}" data-flip="Donate">Donate</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /Footer -->
+
+    <script src="{% static 'app/js/main.min.js' %}"></script>
+</body>
+
+</html>

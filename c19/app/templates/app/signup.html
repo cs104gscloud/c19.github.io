@@ -1,0 +1,227 @@
+{% load static %}<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80883520-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-80883520-4');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Covid predictions</title>
+    <link rel="icon" type="image/ico" href="{% static 'app/img/favicon.ico' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'app/css/vendors.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/main.min.css' %}">
+    <style type="text/css">
+    .reg{
+    /* width: 50%; */
+    /* margin: auto; */
+    margin-top: 20px;
+    margin-bottom: auto;
+    /* padding: 10px; */
+    border: 3px solid white;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #9031687d
+}
+#name{
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    outline: 0px;
+}
+.code{
+    padding: 5px;
+    outline: 0px;
+    border-radius: 3px;
+    border: none;
+}
+
+#sub:hover {
+  opacity: 0.8;
+  box-shadow: 0 15px 30px rgba(0,0,0,1.0);
+}
+
+#num{
+    width: 48%;
+    padding: 5px;
+    outline: 0px;
+    border-radius: 3px;
+    border: none;
+}
+#sub{
+    background-color: #FFC107;
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    color: white;
+    border-radius: 3px;
+}
+
+    </style>
+</head>
+
+<body id="donation" class="preload">
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__spinner">
+            <span class="spinner__ring"></span>
+        </div>
+        <div class="preloader__sitetitle">
+            Praise
+        </div>
+        <div class="preloader__text">
+            Loading
+        </div>
+    </div>
+    <!-- /Preloader-->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar--color" id="navbar">
+        <div class="col-12 col-lg-3 col-xl-3 align-items-center d-flex">
+            <a class="navbar-brand font-weight-bolder mr-xl-3" href="{% url 'home'%}">
+                <img class="navbar-logo navbar-logo--inverted" src="{% static 'app/img/Blace-logo-inverted.svg' %}" alt="Blace">
+                <img class="navbar-logo navbar-logo--default" src="{% static 'app/img/Blace-logo-default.svg' %}" alt="Blace">
+            </a>
+            <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-default" aria-controls="navbars-default" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <span class="burger">
+                        <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                </span>
+                </span>
+            </button>
+        </div>
+        <div class="col-12 col-lg-9 col-xl-6">
+            <div class="collapse navbar-collapse ml-auto mr-auto" id="navbars-default">
+                <ul class="navbar-nav ml-auto mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'protection'%}">Protection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'infected'%}">Infected</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'faq'%}">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'single_news'%}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'archive-news'%}">News Archive</a>
+                            <a class="dropdown-item" href="{% url 'single_news'%}">Single Post</a>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="col-3 d-none d-xl-flex justify-content-end ">
+            <a class="btn btn-outline-light" href="{% url 'donation'%}"><i class='lni lni-heart'></i> Make a Prediction</a>
+        </div>
+    </nav>
+    <!-- /Navigation -->
+    <main role="main">
+        <!-- Hero -->
+        <section class="hero hero-md">
+            <div class="hero__wrapper d-flex align-items-center" style="background-image:  linear-gradient(rgba(5, 21, 46, 0.856), rgba(2, 10, 22, 0.8)), url('static/images/corona virus1.png')">
+                <div class="container">
+                    <div class="hero__text">
+                        <h1>Make Your Prediction </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Hero -->
+        <!-- Donation -->
+        <section class="donation bg-f bg-f--secondary pt-5 pb-5" id="donation-form">
+            <div class="d-flex align-items-center">
+                <div class="container">
+                    <div class="donation__wrapper box-shadow no-box-shadow-sm">
+                        <div class="row justify-content-md-center d-flex">
+                            <div class="col-md-12 mb-5">
+                                <span class="subtitle justify-content-center d-flex">Let’s beat Corona together_</span>
+                                <h2 class="title-line justify-content-center d-flex">Help us fight covid-19</h2>
+                            </div>
+                        </div>
+        <form action="" method="POST">
+            {% csrf_token %}
+                     <div class="reg">
+                        <form id="reg" >
+                            <h2>Register here</h2>
+                            {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'error' %}
+                <div class="text-danger">
+                    {{ message }}
+                </div>
+            {% else %}
+                <div class="text-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+                            Enter a Username:<br><input type="text" name="username" id="name" placeholder="Enter your first name" required></input><br><br>
+                            Enter your Mail:<br/><input type="email" name="email" id="name" placeholder="Enter your mail here" required></input><br><br>
+                            Enter your Password:<br/><input type="password" name="password" id="name" placeholder="Enter your password" required></input><br><br>
+                            Re-Enter your Password:<br/><input type="password" onblur="checkpass()" name="password2" id="name" placeholder="Re-Enter your password" required></input><br><br>
+                            Are you a Doctor ?<input type="checkbox" name="doctor">yes <br><br>
+                            <select class="code">
+                                <option value="+91">+91</option>
+                                <option value="+92">+92</option>
+                                <option value="+93">+93</option>
+                                <option value="+94">+94</option>
+                                <option value="+95">+95</option>
+                            </select>
+                            <input type="number" name="phone" id="num" placeholder="0123457" required><br><br>
+                            <input type="submit" value="register" id="sub" >
+                        </form>
+                    </div>
+        </form>
+               
+        </section>
+        <!-- /Donation -->
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-12 col-md-3 text-left">
+                    <p>© 2020 Copyright Slashdown</p>
+                </div>
+                <div class="col-12 col-md-9 text-md-right">
+                    <ul>
+                        <li><a href="{% url 'faq'%}" data-flip="FAQ">FAQ</a></li>
+                        <li><a href="contact.html" data-flip="Contact">Contact</a></li>
+                        <li><a href="{% url 'donation'%}" data-flip="Donate">Donate</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+    <script src="{% static 'app/js/main.min.js' %}"></script>
+</body>
+
+</html>

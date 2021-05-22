@@ -1,0 +1,538 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+{% block navigation %}
+<div class="col-12 col-lg-9 col-xl-6">
+    <div class="collapse navbar-collapse ml-auto mr-auto" id="navbars-default">
+        <ul class="navbar-nav ml-auto mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home'%}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'protection'%}">Protection</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'infected'%}">Infected</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'faq'%}">FAQ</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{% url 'single_news'%}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{% url 'archive-news'%}">News Archive</a>
+                    <a class="dropdown-item" href="{% url 'single_news'%}">Single Post</a>
+                </div>
+            </li>
+             </ul>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<main role="main">
+
+    <!-- Hero -->
+    <section class="hero hero-md">
+        <div class="hero__wrapper d-flex align-items-center" style="background-image:  linear-gradient(rgba(86, 101, 124, 0.8), rgba(86, 101, 124, 0.8)), url('static/img/hero/hero-md-nx9LpzQBf9Q.jpg')">
+            <div class="container">
+                <div class="hero__text">
+                    <h1>Protect Yourself</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Hero -->
+    <!-- Content -->
+    <section class="content bg-shape-1">
+        <div class="container">
+            <div class="row mt-5 mt-md-10 mb-2 d-flex align-items-center">
+                <div class="col-12 col-md-6" data-aos="fade-right" data-aos-delay="800" data-aos-duration="1200">
+                    <span class="subtitle">How to Protect yourself and others_</span>
+                    <h2 class="title-line text-left">Precautionary measures</h2>
+                    <p class="text-left mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna, eget suscipit erat lobortis ut. Etiam viverra mauris non tortor laoreet, at condimentum felis volutpat. Donec pharetra mauris eget velit fermentum commodo.</p>
+                    <h4>Top 3 measures</h4>
+                    <!-- Bullet-list -->
+                    <div class="bullet-list">
+                        <div class="bullet">
+                            <div class="bullet__icon">
+                                <img src="{% static 'app/img/icons/tissues.svg' %}" alt="Tissues" />
+                            </div>
+                            <div class="bullet__text">
+                                <h5>Use paper tissues</h5>
+                                <p>When a person breaths in droplets from a person with COVID-19</p>
+                            </div>
+                        </div>
+                        <div class="bullet">
+                            <div class="bullet__icon">
+                                <img src="{% static 'app/img/icons/shake-hands.svg' %}" alt="Shake hands" />
+                            </div>
+                            <div class="bullet__text">
+                                <h5>Avoid direct contact</h5>
+                                <p>By touching infected people or objects, then touching their eyes, nose or mouth</p>
+                            </div>
+                        </div>
+                        <div class="bullet">
+                            <div class="bullet__icon">
+                                <img src="{% static 'app/img/icons/wash.svg' %}" alt="Sneeze" />
+                            </div>
+                            <div class="bullet__text">
+                                <h5>Wash your hands regurly</h5>
+                                <p>The Praise spreads is transmitted through coughing and sneezing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Bullet-list -->
+                </div>
+                <div class="col-12 col-md-6 mb-5" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1200">
+                    <!-- Polaroids -->
+                    <div class="img-collage">
+                        <img class="img-bottom polaroid box-shadow" src="{% static 'app/img/content/content-unplash-GxYVbjMOvi8.jpg' %}" alt="Corona" data-aos="fade" data-aos-duration="900">
+                        <img class="img-top polaroid box-shadow" src="{% static 'app/img/content/content-unplash-1xT5Yz2Am0M.jpg' %}" alt="Corona" data-aos="fade" data-aos-duration="900" data-aos-delay="900">
+                    </div>
+                    <!-- /Polaroids -->
+                </div>
+            </div>
+            <div class="row pb-md-10 pb-0 mt-md-5 d-flex align-items-start">
+                <div class="col-12 col-md-4" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1200">
+                    <img src="{% static 'app/img/content/content-iHYs3h94MNE.jpg' %}" alt="Soap" class="polaroid box-shadow d-none d-sm-block">
+                </div>
+                <div class="col-12 col-md-8" data-aos="fade" data-aos-delay="800" data-aos-duration="1200">
+                    <h4 class="mb-3 mt-3">Other important information</h4>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <p class="text-left mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna, eget suscipit erat lobortis ut. Etiam viverra mauris non tortor laoreet, at condimentum felis volutpat. Donec pharetra mauris eget velit fermentum commodo.</p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <p class="text-left mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna, eget suscipit erat lobortis ut. Etiam viverra mauris non tortor laoreet, at condimentum felis volutpat. Donec pharetra mauris eget velit fermentum commodo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-5 d-flex align-items-center">
+                <div class="col-12 col-md-6" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1200">
+                    <span class="subtitle">How to Protect yourself and others_</span>
+                    <h2 class="title-line text-left">Precautionary measures</h2>
+                    <p class="text-left mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna, eget suscipit erat lobortis ut. Etiam viverra mauris non tortor laoreet, at condimentum felis volutpat. Donec pharetra mauris eget velit fermentum commodo. Fusce gravida mauris justo. Morbi in posuere risus. Suspendisse blandit sapien in convallis dignissim.</p>
+                </div>
+                <div class="col-12 col-md-6 mb-5" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1200">
+                    <!-- Video -->
+                    <a class="video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/FC4soCjxSOQ" data-target="#videoModal">
+                        <span class="video-btn__image">
+                            <img src="{% static 'app/img/video/video-unpslash-xrAADPPU4M.jpg' %}" alt="Video" class="polaroid box-shadow">
+                        </span>
+                        <span class="video-btn__icon">
+                            <i class="lni lni-play"></i>
+                        </span>
+                    </a>
+                    <!-- /Video -->
+                    <!-- Video Modal -->
+                    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" id="video"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Video Modal -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Content -->
+
+    <!-- Measures -->
+    <section class="measures pt-5 pb-5 pb-md-10 pt-md-10 bg-f bg-f--secondary" id="measures">
+        <div class="container">
+            <div class="row justify-content-md-center d-flex">
+                <div class="col-12 col-md-6 mb-5">
+                    <span class="subtitle justify-content-center d-flex">How to Protect yourself and others_</span>
+                    <h2 class="title-line justify-content-center d-flex">Precautionary measures</h2>
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="measures__wrapper bg-f bg-f--secondary box-shadow">
+                        <div class="row">
+                            <div class="col-12 col-md-6 measures__border--r">
+                                <div class="measures__do">
+                                    <h3 class="justify-content-center d-flex">What you should do</h3>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+                                            <div class="measure">
+                                                <div class="measure__icon">
+                                                    <img src="{% static 'app/img/icons/wash-g.svg' %}" alt="Wash your hands">
+                                                </div>
+                                                <h6 class="measure__title">
+                                                    Clean your hands regularly
+                                                </h6>
+                                                <p class="measure__text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
+                                            <div class="measure">
+                                                <div class="measure__icon">
+                                                    <img src="{% static 'app/img/icons/tissues-g.svg' %}" alt="Use paper tissues">
+                                                </div>
+                                                <h6 class="measure__title">
+                                                    Use paper tissues
+                                                </h6>
+                                                <p class="measure__text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500">
+                                            <div class="measure">
+                                                <div class="measure__icon">
+                                                    <img src="{% static 'app/img/icons/sneeze-elbow.svg' %}" alt="Sneeze Into Your Elbow">
+                                                </div>
+                                                <h6 class="measure__title">
+                                                    Sneeze Into Your Elbow
+                                                </h6>
+                                                <p class="measure__text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+                                            <div class="measure">
+                                                <div class="measure__icon">
+                                                    <img src="{% static 'app/img/icons/laptop.svg' %}" alt="Work from home if possible">
+                                                </div>
+                                                <h6 class="measure__title">
+                                                    Work from home if possible
+                                                </h6>
+                                                <p class="measure__text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 measures__border--l">
+                                <div class="measures-avoid">
+                                    <h3 class="justify-content-center d-flex">What you should avoid</h3>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1500">
+                                            <div class="measure">
+                                                <div class="measure__icon">
+                                                    <img src="{% static 'app/img/icons/shake-hands-r.svg' %}" alt="Shake hands">
+                                                </div>
+                                                <h6 class="measure__title">
+                                                    Shake hands
+                                                </h6>
+                                                <p class="measure__text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1500">
+                                            <div class="measure">
+                                                <div class="measure__icon">
+                                                    <img src="{% static 'app/img/icons/crowd.svg' %}" alt="Crowded area’s">
+                                                </div>
+                                                <h6 class="measure__title">
+                                                    Crowded area’s
+                                                </h6>
+                                                <p class="measure__text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1500">
+                                            <div class="measure">
+                                                <div class="measure__icon">
+                                                    <img src="{% static 'app/img/icons/cold.svg' %}" alt="Go outdoor with a cold">
+                                                </div>
+                                                <h6 class="measure__title">
+                                                    Go outdoor with a cold
+                                                </h6>
+                                                <p class="measure__text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1500">
+                                            <div class="measure">
+                                                <div class="measure__icon">
+                                                    <img src="{% static 'app/img/icons/distance.svg' %}" alt="Keep your distance">
+                                                </div>
+                                                <h6 class="measure__title">
+                                                    Keep your distance
+                                                </h6>
+                                                <p class="measure__text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis semper magna.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- /Measures -->
+    <!-- FAQ -->
+    <section class="faq bg-f bg-f--secondary pt-5 pb-5 pb-md-10 pt-md-10">
+        <div class="container">
+            <div class="row justify-content-md-center d-flex">
+                <div class="col-12 col-md-6 mb-5">
+                    <span class="subtitle justify-content-center d-flex">FAQ of the Praise _</span>
+                    <h2 class="title-line justify-content-center d-flex">Frequently Asked Questions</h2>
+                    <p class="text-center">Aenean aliquet risus risus, in convallis velit egestas ac. Morbi et ipsum molestie, vehicula turpis id, porttitor elit.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 d-none d-md-block">
+                    <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+                        <a href="#tab1" class="nav-link active" data-toggle="pill" role="tab" aria-controls="tab1" aria-selected="false">
+                            <i class="lni lni-question-circle"></i> General
+                        </a>
+                        <a href="#tab2" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab2" aria-selected="false">
+                            <i class="lni lni-stethoscope"></i> Symptoms
+                        </a>
+                        <a href="#tab3" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab3" aria-selected="false">
+                            <i class="lni lni-syringe"></i> Medical
+                        </a>
+                        <a href="#tab4" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab4" aria-selected="false">
+                            <i class="lni lni-user"></i> Protection
+                        </a>
+                        <a href="#tab5" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab5" aria-selected="false">
+                            <i class="lni lni-travel"></i> Travel
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="tab-content box-shadow" id="faq-tab-content">
+                        <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1">
+                            <h4>General</h4>
+                            <div class="accordion" id="accordion-tab-1">
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-1-heading-1">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-1" aria-expanded="false" aria-controls="accordion-tab-1-content-1">What is are the symptoms of covid-19?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse show" id="accordion-tab-1-content-1" aria-labelledby="accordion-tab-1-heading-1" data-parent="#accordion-tab-1">
+                                        <div class="card-body">
+                                            <p>Aenean aliquet risus risus, in convallis velit egestas ac. Morbi et ipsum molestie, vehicula turpis id, porttitor elit. Aenean eu neque erat. Pellentesque aliquet leo nec dui hendrerit venenatis. Morbi ut leo aliquet eros rhoncus pulvinar dignissim ut risus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-1-heading-2">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-2" aria-expanded="false" aria-controls="accordion-tab-1-content-2">How do i test for Corona?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse" id="accordion-tab-1-content-2" aria-labelledby="accordion-tab-1-heading-2" data-parent="#accordion-tab-1">
+                                        <div class="card-body">
+                                            <p>Sed sagittis interdum ornare. Sed at magna leo. Quisque ultricies massa non risus aliquet, nec pellentesque ligula iaculis. Duis et enim porttitor, fermentum enim id, vestibulum eros. Suspendisse potenti. Suspendisse convallis odio eget velit imperdiet luctus. Suspendisse bibendum pharetra lacus, non dapibus augue interdum nec. Integer pretium metus nec leo imperdiet aliquet. Curabitur nibh est, vulputate eget congue sit amet, maximus sed mi. Curabitur tincidunt augue quis consectetur sollicitudin. Vestibulum in arcu vehicula, eleifend dolor eu, fringilla orci. Mauris sollicitudin blandit ligula sed congue. Vivamus ut diam aliquet dui tempus consequat non eu eros.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-1-heading-3">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-3" aria-expanded="false" aria-controls="accordion-tab-1-content-3">How do i protect myself?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse" id="accordion-tab-1-content-3" aria-labelledby="accordion-tab-1-heading-3" data-parent="#accordion-tab-1">
+                                        <div class="card-body">
+                                            <p>Mauris scelerisque ipsum mauris, in tempor metus commodo eu. In magna enim, sodales rhoncus finibus non, sodales a elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-1-heading-4">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-4" aria-expanded="false" aria-controls="accordion-tab-1-content-4">Can i travel at the moment?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse" id="accordion-tab-1-content-4" aria-labelledby="accordion-tab-1-heading-4" data-parent="#accordion-tab-1">
+                                        <div class="card-body">
+                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2">
+                            <h4>Symptoms</h4>
+                            <div class="accordion" id="accordion-tab-2">
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-2-heading-1">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-1" aria-expanded="false" aria-controls="accordion-tab-2-content-1"> Nunc malesuada ultrices eros vitae tristique?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse show" id="accordion-tab-2-content-1" aria-labelledby="accordion-tab-2-heading-1" data-parent="#accordion-tab-2">
+                                        <div class="card-body">
+                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-2-heading-2">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-2" aria-expanded="false" aria-controls="accordion-tab-2-content-2">Quisque convallis nibh id dui iaculis volutpat?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse" id="accordion-tab-2-content-2" aria-labelledby="accordion-tab-2-heading-2" data-parent="#accordion-tab-2">
+                                        <div class="card-body">
+                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-2-heading-3">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-3" aria-expanded="false" aria-controls="accordion-tab-2-content-3">Integer in viverra elit?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse" id="accordion-tab-2-content-3" aria-labelledby="accordion-tab-2-heading-3" data-parent="#accordion-tab-2">
+                                        <div class="card-body">
+                                            <p>Cras bibendum urna leo, nec ultricies nunc pharetra eget. Sed maximus fermentum mattis</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-2-heading-4">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-4" aria-expanded="false" aria-controls="accordion-tab-2-content-4">Aenean eget gravida eros?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse" id="accordion-tab-2-content-4" aria-labelledby="accordion-tab-2-heading-4" data-parent="#accordion-tab-2">
+                                        <div class="card-body">
+                                            <p>Vivamus vehicula, velit et tincidunt imperdiet, ipsum felis rutrum est, non egestas erat mi hendrerit lacus. Vestibulum ac arcu est. Duis ac neque egestas, efficitur nunc sed, mollis magna. Aliquam ac scelerisque velit, id blandit odio.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3">
+                            <h4>Medical</h4>
+                            <div class="accordion" id="accordion-tab-3">
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-3-heading-1">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-1" aria-expanded="false" aria-controls="accordion-tab-3-content-1">Quisque convallis nibh id dui iaculis volutpat?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse show" id="accordion-tab-3-content-1" aria-labelledby="accordion-tab-3-heading-2" data-parent="#accordion-tab-3">
+                                        <div class="card-body">
+                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-3-heading-2">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-2" aria-expanded="false" aria-controls="accordion-tab-3-content-2">Integer in viverra elit?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse" id="accordion-tab-3-content-2" aria-labelledby="accordion-tab-3-heading-2" data-parent="#accordion-tab-3">
+                                        <div class="card-body">
+                                            <p>Cras bibendum urna leo, nec ultricies nunc pharetra eget. Sed maximus fermentum mattis</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-3-heading-3">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-3" aria-expanded="false" aria-controls="accordion-tab-3-content-3">Aenean eget gravida eros?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse" id="accordion-tab-3-content-3" aria-labelledby="accordion-tab-3-heading-3" data-parent="#accordion-tab-3">
+                                        <div class="card-body">
+                                            <p>Vivamus vehicula, velit et tincidunt imperdiet, ipsum felis rutrum est, non egestas erat mi hendrerit lacus. Vestibulum ac arcu est. Duis ac neque egestas, efficitur nunc sed, mollis magna. Aliquam ac scelerisque velit, id blandit odio.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="tab4">
+                            <h4>Protection</h4>
+                            <div class="accordion" id="accordion-tab-4">
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-4-heading-1">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-1" aria-expanded="false" aria-controls="accordion-tab-4-content-1"> Nunc malesuada ultrices eros vitae tristique?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse show" id="accordion-tab-4-content-1" aria-labelledby="accordion-tab-4-heading-1" data-parent="#accordion-tab-4">
+                                        <div class="card-body">
+                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-4-heading-2">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-2" aria-expanded="false" aria-controls="accordion-tab-4-content-2">Aenean eget gravida eros?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse" id="accordion-tab-4-content-2" aria-labelledby="accordion-tab-4-heading-2" data-parent="#accordion-tab-4">
+                                        <div class="card-body">
+                                            <p>Vivamus vehicula, velit et tincidunt imperdiet, ipsum felis rutrum est, non egestas erat mi hendrerit lacus. Vestibulum ac arcu est. Duis ac neque egestas, efficitur nunc sed, mollis magna. Aliquam ac scelerisque velit, id blandit odio.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab5" role="tabpanel" aria-labelledby="tab5">
+                            <h4>Travel</h4>
+                            <div class="accordion" id="accordion-tab-5">
+                                <div class="card">
+                                    <div class="card-header" id="accordion-tab-5-heading-1">
+                                        <h5>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-5-content-1" aria-expanded="false" aria-controls="accordion-tab-5-content-1"> Nunc malesuada ultrices eros vitae tristique?</button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse show" id="accordion-tab-5-content-1" aria-labelledby="accordion-tab-5-heading-1" data-parent="#accordion-tab-5">
+                                        <div class="card-body">
+                                            <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /FAQ -->
+    <!-- Call To Action -->
+    <section class="cta" id="cta">
+        <div data-jarallax data-speed="0.2" class="jarallax">
+            <img src="{% static 'app/img/cta/cta-unsplash-rnr8D3FNUNY.jpg' %}" alt="Jarallax" data-speed="0.7" class="jarallax-img jarallax-img--darken">
+            <div class="jarallax__content d-flex justify-content-center align-items-center" data-aos="fade" data-aos-delay="300" data-aos-duration="1000">
+                <span class="subtitle">Together we can make the difference_</span>
+                <h2>Help us stop Corona</h2>
+                <a href="{% url 'donation'%}" class="btn btn-outline-primary btn--wider mt-4 smoothscroll"><i class='lni lni-heart'></i> Make a Donation</a>
+            </div>
+        </div>
+    </section>
+    <!-- /Call To Action -->
+</main>
+{% endblock %}

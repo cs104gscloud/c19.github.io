@@ -1,0 +1,166 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+{% block navigation %}
+        <div class="col-12 col-lg-9 col-xl-6">
+            <div class="collapse navbar-collapse ml-auto mr-auto" id="navbars-default">
+                <ul class="navbar-nav ml-auto mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'protection'%}">Protection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'infected'%}">Infected</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'faq'%}">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="{% url 'single_news'%}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'archive-news'%}">News Archive</a>
+                            <a class="dropdown-item" href="{% url 'single_news'%}">Single Post</a>
+                        </div>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+{% endblock %}
+{% block content %}
+    <main role="main">
+        <!-- Blog Featured -->
+        <section class="blog-featured pt-5 pb-5 pt-md-10 bg-f bg-f--secondary" id="blog-featured">
+            <div class="container">
+                <div class="row justify-content-md-center d-flex">
+                    <div class="col-md-12">
+                        <div class="col-md-12 mb-md-10">
+                            <span class="subtitle justify-content-center d-flex">Daily updated news from all around the world_</span>
+                            <h2 class="title-line justify-content-center d-flex">Latest News</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-8">
+                        <a href="{% url 'single_news'%}" class="featured__link">
+                            <div class="featured__item featured__item--1">
+                                <div class="item__image">
+                                    <img src="{% static 'app/img/blog/blog-unsplash-JonaIo2f6Ak.jpg' %}" alt="image" />
+                                </div>
+                                <div class="featured__content">
+                                    <span class="featured__category">China</span>
+                                    <h3 class="featured__title">Wuhan in another lockdown</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="{% url 'single_news'%}" class="featured__link">
+                                    <div class="featured__item featured__item--2">
+                                        <div class="item__image">
+                                            <img src="{% static 'app/img/blog/blog-unplash-pV5arhEZHiA.jpg' %}" alt="image" />
+                                        </div>
+                                        <div class="featured__content">
+                                            <span class="featured__category">Medical</span>
+                                            <h4 class="featured__title">Vaccin in testing stage</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="{% url 'single_news'%}" class="featured__link">
+                                    <div class="featured__item featured__item--3">
+                                        <div class="item__image">
+                                            <img src="{% static 'app/img/blog/blog-unplash-0UF_vme6lJ8.jpg' %}" alt="image" />
+                                        </div>
+                                        <div class="featured__content">
+                                            <span class="featured__category">Health</span>
+                                            <h4 class="featured__title">How to protect infants</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Blog Featured -->
+        <!-- Blog Grid -->
+        <section class="blog-grid pb-5 pb-md-10 bg-f bg-f--secondary" id="blog-grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-4">
+                        <div class="grid__item box-shadow">
+                            <a href="{% url 'single_news'%}" class="grid__link">
+                                <div class="item__image">
+                                    <img src="{% static 'app/img/blog/blog-unplash-3mErKfgolzM.jpg' %}" alt="image" />
+                                </div>
+                            </a>
+                            <div class="grid__content">
+                                <a href="{% url 'single_news'%}">
+                                    <span class="grid__category subtitle">Covid-19</span>
+                                    <h4 class="grid__title">What is the cause of COVID-19</h4>
+                                    <p class="grid__text">Aenean aliquet risus risus, in convallis velit egestas ac. Morbi et ipsum molestie, vehicula turpis id, porttitor elit. Aenean eu neque erat.</p>
+                                </a>
+                                <a class="grid__btn" href="{% url 'single_news'%}">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <div class="grid__item box-shadow">
+                            <a href="{% url 'single_news'%}" class="grid__link">
+                                <div class="item__image">
+                                    <img src="{% static 'app/img/blog/blog-unplash-O5Fo4vUuIBM.jpg' %}" alt="image" />
+                                </div>
+                            </a>
+                            <div class="grid__content">
+                                <a href="{% url 'single_news'%}">
+                                    <span class="grid__category subtitle">Medical</span>
+                                    <h4 class="grid__title">Do mouthcaps really work?</h4>
+                                    <p class="grid__text">Aenean aliquet risus risus, in convallis velit egestas ac. Morbi et ipsum molestie, vehicula turpis id, porttitor elit. Aenean eu neque erat.</p>
+                                </a>
+                                <a class="grid__btn" href="{% url 'single_news'%}">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <div class="grid__item box-shadow">
+                            <a href="{% url 'single_news'%}" class="grid__link">
+                                <div class="item__image">
+                                    <img src="{% static 'app/img/blog/blog-unplash-JIlFFKaGjWA.jpg' %}" alt="image" />
+                                </div>
+                            </a>
+                            <div class="grid__content">
+                                <a href="{% url 'single_news'%}">
+                                    <span class="grid__category subtitle">Europe</span>
+                                    <h4 class="grid__title">5 Extraordinary protect tips</h4>
+                                    <p class="grid__text">Aenean aliquet risus risus, in convallis velit egestas ac. Morbi et ipsum molestie, vehicula turpis id, porttitor elit. Aenean eu neque erat.</p>
+                                </a>
+                                <a class="grid__btn" href="{% url 'single_news'%}">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Blog Grid -->
+        <!-- Call To Action -->
+        <section class="cta" id="cta">
+            <div data-jarallax data-speed="0.2" class="jarallax">
+                <img src="{% static 'app/img/cta/cta-unsplash-rnr8D3FNUNY.jpg' %}" alt="Jarallax" data-speed="0.7" class="jarallax-img jarallax-img--darken">
+                <div class="jarallax__content d-flex justify-content-center align-items-center" data-aos="fade" data-aos-delay="300" data-aos-duration="1000">
+                    <span class="subtitle">Together we can make the difference_</span>
+                    <h2>Help us stop Corona</h2>
+                    <a href="{% url 'donation'%}" class="btn btn-outline-primary btn--wider mt-4 smoothscroll"><i class='lni lni-heart'></i> Make a Donation</a>
+                </div>
+            </div>
+        </section>
+        <!-- /Call To Action -->
+    </main>
+    {% endblock %}

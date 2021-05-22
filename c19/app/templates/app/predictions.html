@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title> Prediction Results</title>
+<style>
+body {
+  font-family: Helvetica; 
+  background: url({% static 'app/images/heart4.jpg' %})40%25%;
+  background-size:cover;
+  color: white; 
+}
+
+</style>
+</head>
+<body><table>
+    <tr height="10px"></tr></table>
+<table><x>Hello,{{ request.user.username }}<br><br>
+Your Covid19 Disease Prediction Results</x>
+</tr>
+</table>
+<table>
+    <tr height="100px"></tr>
+</table>
+<table align=center bordercolor="white" border="white">
+<tr>
+    <td colspan="2">
+        <h3>Dry Cough :&nbsp;&nbsp;&nbsp; </h3>
+    </td>
+    <td>
+        <h3>{{ dry }}</h3>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2">
+        <h3>Fever:&nbsp;&nbsp;&nbsp; </h3>
+    </td>
+    <td>
+        <h3>{{ fever }}</h3>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2">
+        <h3>Sore Throat:&nbsp;&nbsp;&nbsp; </h3>
+    </td>
+    <td>
+        <h3>{{ throat }}</h3>
+    </td>
+</tr>
+
+
+<tr>
+    <td colspan="2">
+        <h3>Difficulty:&nbsp;&nbsp;&nbsp; </h3>
+    </td>
+    <td>
+        <h3>{{ difficulty }}</h3>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2">
+        <h3>Your prediction is:&nbsp;&nbsp;&nbsp; </h3>
+    </td>
+    <td>
+        <h3>{{ prediction }}</h3>
+    </td>
+</tr>
+<table width=100%>
+    <tr height="100px">
+        <td with="30%"></td>
+        <td with="30%">
+
+            <form method="get" action="logout" style="font-size: 0px">
+                <button type="submit">Logout </button>
+            </form>
+        <td with="30%"> </td>
+
+    </table>
+</body>
+</html>

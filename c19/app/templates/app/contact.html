@@ -1,0 +1,103 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+{% block navigation %}
+        <div class="col-12 col-lg-9 col-xl-6">
+            <div class="collapse navbar-collapse ml-auto mr-auto" id="navbars-default">
+                <ul class="navbar-nav ml-auto mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'protection'%}">Protection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'infected'%}">Infected</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'faq'%}">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'single_news'%}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'archive-news'%}">News Archive</a>
+                            <a class="dropdown-item" href="{% url 'single_news'%}">Single Post</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'contact'%}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+{% endblock %}
+{% block content %}
+    <main role="main">
+        <!-- Hero -->
+        <section class="hero hero-md">
+            <div class="hero__wrapper d-flex align-items-center" style="background-image:  linear-gradient(rgba(86, 101, 124, 0.8), rgba(86, 101, 124, 0.8)), url('/img/hero/hero-md-YK3uwwChxbA.jpg')">
+                <div class="container">
+                    <div class="hero__text">
+                        <h1>Contact</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Hero -->
+        <!-- Contact -->
+        <section class="contact bg-f bg-f--secondary pt-5 pb-5" id="contact-form">
+            <div class="d-flex align-items-center">
+                <div class="container">
+                    <div class="contact__wrapper box-shadow no-box-shadow-sm">
+                        <div class="row justify-content-md-center d-flex">
+                            <div class="col-md-12">
+                                <div class="col-md-12 mb-5">
+                                    <span class="subtitle justify-content-center d-flex">We’ll have an answer for the CoronaPraise</span>
+                                    <h2 class="title-line justify-content-center d-flex">Get in touch</h2>
+                                    <p class="text-center">Aenean aliquet risus risus, in convallis velit egestas ac. Morbi et ipsum molestie, vehicula turpis id, porttitor elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="contact-methods">
+                                    <li><i class="lni-envelope"></i> <a href="#">Mail</a>&nbsp;us at hi@slashdown.app</li>
+                                    <li><i class="lni-phone-handset"></i> <a href="#">Call</a>&nbsp;us at +31228115673</li>
+                                    <li><i class="lni-map"></i> <a href="#">Visit</a>&nbsp;us at 4 175 5th Ave, New York</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                                            <div class="input-border"></div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                            <div class="input-border"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <textarea class="form-control" id="textarea" placeholder="Message..." rows="10"></textarea>
+                                            <div class="input-border"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row mt-5">
+                                        <div class="col-md-12 justify-content-md-center d-flex">
+                                            <button type="submit" class="btn btn-primary btn--wider">Send Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Contact -->
+    </main>
+    {% endblock %}

@@ -1,0 +1,276 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+{% block navigation %}
+        <div class="col-12 col-lg-9 col-xl-6">
+            <div class="collapse navbar-collapse ml-auto mr-auto" id="navbars-default">
+                <ul class="navbar-nav ml-auto mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'protection'%}">Protection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'infected'%}">Infected</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'faq'%}">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'single_news'%}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'archive-news'%}">News Archive</a>
+                            <a class="dropdown-item" href="{% url 'single_news'%}">Single Post</a>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+{% endblock %}
+{% block content %}
+    <main role="main">
+        <!-- Hero -->
+        <section class="hero hero-md">
+            <div class="hero__wrapper d-flex align-items-center" style="background-image:  linear-gradient(rgba(86, 101, 124, 0.8), rgba(86, 101, 124, 0.8)), url('/img/hero/hero-md-PCWxONF5JY4.jpg')">
+                <div class="container">
+                    <div class="hero__text">
+                        <h1>FAQ</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Hero -->
+        <!-- FAQ -->
+        <section class="faq bg-f bg-f--secondary pt-5 pb-5 pb-md-10 pt-md-10">
+            <div class="container">
+                <div class="row justify-content-md-center d-flex">
+                    <div class="col-12 col-md-6 mb-5">
+                        <span class="subtitle justify-content-center d-flex">FAQ of the CoronaPraise_</span>
+                        <h2 class="title-line justify-content-center d-flex">Frequently Asked Questions</h2>
+                        <p class="text-center">Aenean aliquet risus risus, in convallis velit egestas ac. Morbi et ipsum molestie, vehicula turpis id, porttitor elit.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 d-none d-md-block">
+                        <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+                            <a href="#tab1" class="nav-link active" data-toggle="pill" role="tab" aria-controls="tab1" aria-selected="false">
+                                <i class="lni lni-question-circle"></i> General
+                            </a>
+                            <a href="#tab2" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab2" aria-selected="false">
+                                <i class="lni lni-stethoscope"></i> Symptoms
+                            </a>
+                            <a href="#tab3" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab3" aria-selected="false">
+                                <i class="lni lni-syringe"></i> Medical
+                            </a>
+                            <a href="#tab4" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab4" aria-selected="false">
+                                <i class="lni lni-user"></i> Protection
+                            </a>
+                            <a href="#tab5" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab5" aria-selected="false">
+                                <i class="lni lni-travel"></i> Travel
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="tab-content box-shadow" id="faq-tab-content">
+                            <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1">
+                                <h4>General</h4>
+                                <div class="accordion" id="accordion-tab-1">
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-1-heading-1">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-1" aria-expanded="false" aria-controls="accordion-tab-1-content-1">What is are the symptoms of covid-19?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse show" id="accordion-tab-1-content-1" aria-labelledby="accordion-tab-1-heading-1" data-parent="#accordion-tab-1">
+                                            <div class="card-body">
+                                                <p>Aenean aliquet risus risus, in convallis velit egestas ac. Morbi et ipsum molestie, vehicula turpis id, porttitor elit. Aenean eu neque erat. Pellentesque aliquet leo nec dui hendrerit venenatis. Morbi ut leo aliquet eros rhoncus pulvinar dignissim ut risus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-1-heading-2">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-2" aria-expanded="false" aria-controls="accordion-tab-1-content-2">How do i test for Corona?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse" id="accordion-tab-1-content-2" aria-labelledby="accordion-tab-1-heading-2" data-parent="#accordion-tab-1">
+                                            <div class="card-body">
+                                                <p>Sed sagittis interdum ornare. Sed at magna leo. Quisque ultricies massa non risus aliquet, nec pellentesque ligula iaculis. Duis et enim porttitor, fermentum enim id, vestibulum eros. Suspendisse potenti. Suspendisse convallis odio eget velit imperdiet luctus. Suspendisse bibendum pharetra lacus, non dapibus augue interdum nec. Integer pretium metus nec leo imperdiet aliquet. Curabitur nibh est, vulputate eget congue sit amet, maximus sed mi. Curabitur tincidunt augue quis consectetur sollicitudin. Vestibulum in arcu vehicula, eleifend dolor eu, fringilla orci. Mauris sollicitudin blandit ligula sed congue. Vivamus ut diam aliquet dui tempus consequat non eu eros.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-1-heading-3">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-3" aria-expanded="false" aria-controls="accordion-tab-1-content-3">How do i protect myself?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse" id="accordion-tab-1-content-3" aria-labelledby="accordion-tab-1-heading-3" data-parent="#accordion-tab-1">
+                                            <div class="card-body">
+                                                <p>Mauris scelerisque ipsum mauris, in tempor metus commodo eu. In magna enim, sodales rhoncus finibus non, sodales a elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-1-heading-4">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-4" aria-expanded="false" aria-controls="accordion-tab-1-content-4">Can i travel at the moment?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse" id="accordion-tab-1-content-4" aria-labelledby="accordion-tab-1-heading-4" data-parent="#accordion-tab-1">
+                                            <div class="card-body">
+                                                <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2">
+                                <h4>Symptoms</h4>
+                                <div class="accordion" id="accordion-tab-2">
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-2-heading-1">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-1" aria-expanded="false" aria-controls="accordion-tab-2-content-1"> Nunc malesuada ultrices eros vitae tristique?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse show" id="accordion-tab-2-content-1" aria-labelledby="accordion-tab-2-heading-1" data-parent="#accordion-tab-2">
+                                            <div class="card-body">
+                                                <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-2-heading-2">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-2" aria-expanded="false" aria-controls="accordion-tab-2-content-2">Quisque convallis nibh id dui iaculis volutpat?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse" id="accordion-tab-2-content-2" aria-labelledby="accordion-tab-2-heading-2" data-parent="#accordion-tab-2">
+                                            <div class="card-body">
+                                                <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-2-heading-3">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-3" aria-expanded="false" aria-controls="accordion-tab-2-content-3">Integer in viverra elit?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse" id="accordion-tab-2-content-3" aria-labelledby="accordion-tab-2-heading-3" data-parent="#accordion-tab-2">
+                                            <div class="card-body">
+                                                <p>Cras bibendum urna leo, nec ultricies nunc pharetra eget. Sed maximus fermentum mattis</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-2-heading-4">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-4" aria-expanded="false" aria-controls="accordion-tab-2-content-4">Aenean eget gravida eros?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse" id="accordion-tab-2-content-4" aria-labelledby="accordion-tab-2-heading-4" data-parent="#accordion-tab-2">
+                                            <div class="card-body">
+                                                <p>Vivamus vehicula, velit et tincidunt imperdiet, ipsum felis rutrum est, non egestas erat mi hendrerit lacus. Vestibulum ac arcu est. Duis ac neque egestas, efficitur nunc sed, mollis magna. Aliquam ac scelerisque velit, id blandit odio.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3">
+                                <h4>Medical</h4>
+                                <div class="accordion" id="accordion-tab-3">
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-3-heading-1">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-1" aria-expanded="false" aria-controls="accordion-tab-3-content-1">Quisque convallis nibh id dui iaculis volutpat?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse show" id="accordion-tab-3-content-1" aria-labelledby="accordion-tab-3-heading-2" data-parent="#accordion-tab-3">
+                                            <div class="card-body">
+                                                <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-3-heading-2">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-2" aria-expanded="false" aria-controls="accordion-tab-3-content-2">Integer in viverra elit?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse" id="accordion-tab-3-content-2" aria-labelledby="accordion-tab-3-heading-2" data-parent="#accordion-tab-3">
+                                            <div class="card-body">
+                                                <p>Cras bibendum urna leo, nec ultricies nunc pharetra eget. Sed maximus fermentum mattis</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-3-heading-3">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-3" aria-expanded="false" aria-controls="accordion-tab-3-content-3">Aenean eget gravida eros?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse" id="accordion-tab-3-content-3" aria-labelledby="accordion-tab-3-heading-3" data-parent="#accordion-tab-3">
+                                            <div class="card-body">
+                                                <p>Vivamus vehicula, velit et tincidunt imperdiet, ipsum felis rutrum est, non egestas erat mi hendrerit lacus. Vestibulum ac arcu est. Duis ac neque egestas, efficitur nunc sed, mollis magna. Aliquam ac scelerisque velit, id blandit odio.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="tab4">
+                                <h4>Protection</h4>
+                                <div class="accordion" id="accordion-tab-4">
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-4-heading-1">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-1" aria-expanded="false" aria-controls="accordion-tab-4-content-1"> Nunc malesuada ultrices eros vitae tristique?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse show" id="accordion-tab-4-content-1" aria-labelledby="accordion-tab-4-heading-1" data-parent="#accordion-tab-4">
+                                            <div class="card-body">
+                                                <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-4-heading-2">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-2" aria-expanded="false" aria-controls="accordion-tab-4-content-2">Aenean eget gravida eros?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse" id="accordion-tab-4-content-2" aria-labelledby="accordion-tab-4-heading-2" data-parent="#accordion-tab-4">
+                                            <div class="card-body">
+                                                <p>Vivamus vehicula, velit et tincidunt imperdiet, ipsum felis rutrum est, non egestas erat mi hendrerit lacus. Vestibulum ac arcu est. Duis ac neque egestas, efficitur nunc sed, mollis magna. Aliquam ac scelerisque velit, id blandit odio.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab5" role="tabpanel" aria-labelledby="tab5">
+                                <h4>Travel</h4>
+                                <div class="accordion" id="accordion-tab-5">
+                                    <div class="card">
+                                        <div class="card-header" id="accordion-tab-5-heading-1">
+                                            <h5>
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-5-content-1" aria-expanded="false" aria-controls="accordion-tab-5-content-1"> Nunc malesuada ultrices eros vitae tristique?</button>
+                                            </h5>
+                                        </div>
+                                        <div class="collapse show" id="accordion-tab-5-content-1" aria-labelledby="accordion-tab-5-heading-1" data-parent="#accordion-tab-5">
+                                            <div class="card-body">
+                                                <p>Proin vel tellus a mauris venenatis scelerisque non non augue. Integer in viverra elit, in lacinia augue. Nunc malesuada ultrices eros vitae tristique. Quisque convallis nibh id dui iaculis volutpat. Nunc rutrum purus libero.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /FAQ -->
+    </main>
+{% endblock %}

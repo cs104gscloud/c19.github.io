@@ -1,0 +1,192 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+{% block navigation %}
+        <div class="col-12 col-lg-9 col-xl-6">
+            <div class="collapse navbar-collapse ml-auto mr-auto" id="navbars-default">
+                <ul class="navbar-nav ml-auto mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'protection'%}">Protection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'infected'%}">Infected</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'faq'%}">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="{% url 'single_news'%}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'archive-news'%}">News Archive</a>
+                            <a class="dropdown-item" href="{% url 'single_news'%}">Single Post</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact'%}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+{% endblock %}
+{% block content %}
+    <main role="main">
+
+        <!-- Single post -->
+        <article class="single-post pb-md-10" id="blog-single">
+            <div class="bg-f--secondary pt-5">
+                <div class="container">
+                    <div class="row justify-content-md-center d-flex">
+                        <div class="col-lg-8">
+                            <div class="col-md-12 mb-5">
+                                <span class="post__category subtitle justify-content-center d-flex">China</span>
+                                <h1 class="post__title title-line justify-content-center d-flex text-center">Wuhan in another lockdown</h1>
+                                <span class="post__date  justify-content-center d-flex">31 January, 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="post__img">
+                                <img src="{% static 'app/img/blog/blog-unplash-3mErKfgolzM.jpg' %}" alt="post_img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center d-flex">
+                        <div class="col-lg-8">
+                            <div class="post__entry bg-f--primary box-shadow">
+                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vulputate dignissim ipsum, eget rutrum ex dignissim id. Aliquam bibendum sagittis tortor luctus tincidunt. Mauris mauris velit, mollis nec nisi ac, mollis elementum erat. Suspendisse maximus eros at turpis mollis, ac vehicula lacus venenatis.</p>
+                                <p>Cras lobortis justo at lectus sollicitudin, non venenatis dui rutrum. Praesent laoreet nibh sed tempor faucibus. Cras in ex lacus. In sagittis, urna sed interdum dapibus, magna velit euismod nisl, et pharetra mi diam ut leo.</p>
+                                <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat id turpis sit amet molestie. Proin pharetra consequat finibus. Nulla facilisi sed.</blockquote>
+                                <h4>Back to maximum control</h4>
+                                <p>Consectetur odio eu eleifend euismod. In hac habitasse platea dictumst. In <a href="#">feugiat</a> commodo neque, non suscipit odio consectetur vel. In in mauris ipsum. Quisque pharetra eget quam non laoreet. Nullam lacinia gravida lorem. Curabitur congue, justo quis porta mollis, augue mauris sagittis mauris, eu accumsan eros augue interdum urna.</p>
+                                <ul>
+                                    <li>Aliquam bibendum sagittis</li>
+                                    <li>Tortor luctus tincidunt</li>
+                                    <li>Mauris <strong>mauris velit</strong></li>
+                                    <li>Tonsectetur aliquet nisi</li>
+                                    <li>Mollis <a href="#">nec nisi</a> act</li>
+                                </ul>
+                                <p>Integer non sollicitudin elit. Integer a ex ac purus faucibus convallis. Curabitur porta tortor eros, eget mollis quam convallis eget. Donec vel lobortis massa, eu commodo augue. Nullam rutrum ultricies aliquet. Curabitur mollis mauris maximus mauris varius eleifend. Phasellus sodales mauris mauris, a auctor tortor tincidunt non.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post footer -->
+                    <div class="single-post__footer">
+                        <div class="row justify-content-md-center d-flex">
+                            <div class="col-lg-8">
+                                <div class="row">
+                                    <div class="col-6 col-md-6 align-items-center justify-content-start d-flex">
+                                        <div class="social-share">
+                                            <span>Share:</span>
+                                            <ul>
+                                                <li><a href="#!"><i class="lni-facebook-filled"></i></a></li>
+                                                <li><a href="#!"><i class="lni-twitter-filled"></i></a></li>
+                                                <li><a href="#!"><i class="lni-behance-original"></i></a></li>
+                                                <li><a href="#!"><i class="lni-pinterest"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-6 align-items-center justify-content-end d-flex">
+                                        <div class="post__comment-count">
+                                            <a href="#post-comments" class="smoothscroll">2 comments</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-f--primary">
+                <div class="container">
+                    <!-- Post Author -->
+                    <div class="row justify-content-md-center d-flex">
+                        <div class="col-lg-8">
+                            <div class="post__author">
+                                <img src="{% static 'app/img/blog/post-author-avatar.jpg' %}" alt="Author profile photo" class="rounded-circle author__img" />
+                                <div class="author__text">
+                                    <h5>About Mike Baker</h5>
+                                    <ul class="social-channels">
+                                        <li><a href="#!"><i class="lni-behance-original"></i></a></li>
+                                        <li><a href="#!"><i class="lni-instagram-original"></i></a></li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat id turpis sit amet molestie. Proin pharetra consequat finibus. Nulla facilisi. Sed sodales nisl lectus, sed fringilla justo mollis ac. Vestibulum dapibus, nibh a consequat laoreet. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comments -->
+                    <div class="row justify-content-md-center d-flex">
+                        <div class="col-lg-8">
+                            <div class="post__comments" id="post-comments">
+                                <h4>2 comments</h4>
+                                <div class="post__comment">
+                                    <img src="{% static 'app/img/blog/post-comment-avatar-1.jpg' %}" alt="Comment profile photo" class="rounded-circle comment__img" />
+                                    <div class="comment__text">
+                                        <a href="#form" name="button" class="btn btn-outline-primary btn-reply smoothscroll">Reply</a>
+                                        <div class="comment__author">
+                                            <h5>Jane Smith</h5>
+                                        </div>
+                                        <div class="comment__date">
+                                            January 28, 2021 - 1:10am
+                                        </div>
+                                        <p class="comment__the-comment">Donec eros odio, ultrices a orci sodales, consectetur aliquet nisi. Nunc pretium, ipsum quis rutrum viverra, leo felis euismod orci, eu consequat mi felis quis justo. Suspendisse potenti. Aliquam erat volutpat. Vestibulum a nibh ut nulla maximus imperdiet at in dui. Pellentesque posuere sollicitudin cursus.</p>
+                                    </div>
+                                </div>
+                                <div class="post__comment">
+                                    <img src="{% static 'app/img/blog/post-comment-avatar-1.jpg' %}" alt="Comment profile photo" class="rounded-circle comment__img" />
+                                    <div class="comment__text">
+                                        <a href="#form" name="button" class="btn btn-outline-primary btn-reply smoothscroll">Reply</a>
+                                        <div class="comment__author">
+                                            <h5>Jane Smith</h5>
+                                        </div>
+                                        <div class="comment__date">
+                                            January 28, 2021 - 1:10am
+                                        </div>
+                                        <p class="comment__the-comment">Donec eros odio, ultrices a orci sodales, consectetur aliquet nisi. Nunc pretium, ipsum quis rutrum viverra, leo felis euismod orci, eu consequat mi felis quis justo. Suspendisse potenti. Aliquam erat volutpat. Vestibulum a nibh ut nulla maximus imperdiet at in dui. Pellentesque posuere sollicitudin cursus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Comments -->
+                    <!-- Comment Form -->
+                    <div class="row justify-content-md-center d-flex" id="form">
+                        <div class="col-lg-8">
+                            <div class="post__form mb-5">
+                                <h4 class="mt-md-5 mb-md-10">Leave a comment</h4>
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                                            <div class="input-border"></div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                            <div class="input-border"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <textarea class="form-control" id="textarea" placeholder="Your comment..." rows="10"></textarea>
+                                            <div class="input-border"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row mt-5">
+                                        <div class="col-md-12 justify-content-md-center d-flex">
+                                            <button type="submit" class="btn btn-primary btn--wider">Send Comment</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Comment Form -->
+                </div>
+            </div>
+        </article>
+        <!-- /Single post -->
+    </main>
+{% endblock %}
